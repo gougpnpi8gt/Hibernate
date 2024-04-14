@@ -35,7 +35,7 @@ public class Actor {
         this.movies = movies;
     }
 
-    public Actor(){
+    public Actor() {
 
     }
 

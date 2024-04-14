@@ -16,7 +16,7 @@ public class School {
             referencedColumnName = "id")
     private Principal principal;
 
-    public School(){
+    public School() {
 
     }
 

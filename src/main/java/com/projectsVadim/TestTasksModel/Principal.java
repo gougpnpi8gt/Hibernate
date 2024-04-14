@@ -15,7 +15,8 @@ public class Principal {
     private int age;
     @OneToOne(mappedBy = "principal")
     private School school;
-    public Principal(){
+
+    public Principal() {
 
     }
 
