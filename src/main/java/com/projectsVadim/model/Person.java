@@ -22,7 +22,8 @@ public class Person {
     private int age;
 
     @OneToOne(mappedBy = "person") // это не оунин-сайт, только там где используем аннотацию JoinColumn
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE) // при сохранении человека с ним сохраняется связанный паспорт
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    // при сохранении человека с ним сохраняется связанный паспорт
     private Passport passport;
 
     public Passport getPassport() {
@@ -39,17 +40,18 @@ public class Person {
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
     private List<Item> items;
 
-    public void addItem(Item item){
-        if (this.items == null){
+    public void addItem(Item item) {
+        if (this.items == null) {
             this.items = new ArrayList<>();
         }
         this.items.add(item);
         item.setOwner(this);
     }
 
-    public Person(){
+    public Person() {
 
     }
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;

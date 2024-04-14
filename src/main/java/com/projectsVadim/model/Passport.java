@@ -26,9 +26,11 @@ public class Passport {
 
     @Column(name = "passport_number")
     private int passportNumber;
-    public Passport(){
+
+    public Passport() {
 
     }
+
     public Passport(int passportNumber) {
         this.passportNumber = passportNumber;
     }
